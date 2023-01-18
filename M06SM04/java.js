@@ -17,3 +17,15 @@ const p2 = new Product("Monitor", 800, 10); //cria um novo objeto adicionando va
 console.log(p2);
 
 //prototype é um mecanismo pelo qual objetos herdam recursos uns dos outros
+
+//---------------------------------------------------
+
+//Modulos
+//para utilizar modulos é preciso adicionar export na frente das funcoes que se deseja exportar para o arquivo main, no arquivo main é preciso utilizar o import * as "nome do pacote de funcao" from "./"nome do local do arquivo"". No arquivo index.html é preciso dar load apenas no arquivo principal e declarar o type="module"
+
+export function sum(x, y) {
+  return x + y;
+}
+
+//outra maneira de exportar, tirar a palavra export da frente do function
+//export {sum};
