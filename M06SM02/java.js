@@ -38,3 +38,16 @@ console.log(`${str.substring(2, 5)}`); //imprime a posicao da string 2 até 5
 const str10 = "Lucas Santana    "; // string com espaços em branco no final
 
 console.log(`${str10.trim()}`); //remover espaços em brancos no final da string
+
+//--------------------------------------------------
+
+//% resto da divisao
+//**  exponenciacao
+
+console.log("3" == 3); //resultado vai dar verdadeiro mas uma variavel é do tipo string e outra é do tipo numero, true
+
+console.log("3" === 3); // o operador === leva em consideração o tipo da variavel, false
+
+const a = new String("Lucas"); //variavel a é do tipo objeto devido ao uso da funcao construtora
+
+//---------------------------------------------------
