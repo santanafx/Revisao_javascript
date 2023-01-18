@@ -38,3 +38,59 @@ areaCirculo();
 //hoisting = caracteristica do javascript onde todas as funcoes são executadas primeiro. Se todas as funcoes forem colocadas no final do codigo isso nao irá ter influencia no codigo
 
 //--------------------------------------------------------
+
+//funcoes alta ordem
+
+const lista1 = [1, 2, 3, 4];
+const lista2 = [];
+const nomes = ["MARTA", "JOAO", "ANABELA"];
+
+//map: aplica uma funcao a cada elemento da colecao original, retornando uma nova colecao com os elementos alterados
+
+function dobro(x) {
+  return x * 2;
+}
+
+function triplo(x) {
+  return x * 3;
+}
+
+const m1 = lista1.map(dobro); //utiliza uma funcao map e passa uma referencia da funcao dobro
+
+const m2 = lista1.map((x) => x * 3); //utilizacao de uma funcao anonima
+
+console.log(m1);
+console.log(m2);
+
+//filter: retorna uma nova colecao contendo apenas aqueles elementos da colecao original que satisfazem um dado de verdadeiro ou falso
+
+//funcao que retorna par ou impar
+function par(x) {
+  return x % 2 == 0;
+}
+
+const f1 = lista1.filter(par);
+
+console.log(f1);
+
+//reduce: aplica cumulativamente uma funcao aos elementos de uma colecao, retornando o resultado final cumulativo. Exe:somar todos os numeros do array e retornar somente 1 numero. Voce pode informar, opcionamente, um valor inicial como parametro.
+
+function soma(x, y) {
+  return x + y;
+}
+
+const r1 = lista1.reduce(soma, 0); //o segundo argumento serve para somar uma lista vazia, caso contrario, o console ira retornar um erro
+
+console.log(r1);
+
+//sort: ordena a colecao conforme a funcao de comparacao informada como parametro. O sort altera o vetor original
+
+function compararPorTamanho(s1, s2) {
+  return s1.length - s2.length;
+}
+
+const s1 = nomes.sort(); //sem informar parametros o sort organiza o array em ordem alfabetica,
+const s2 = nomes.sort(compararPorTamanho);
+
+console.log(s1);
+console.log(s2);
