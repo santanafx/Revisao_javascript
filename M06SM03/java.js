@@ -137,3 +137,31 @@ function subTotal({ price, quantity }) {
 }
 
 console.log(subTotal(obj3.items[1]));
+
+//---------------------------------------------------
+
+//REST: valores passados com virgula => array
+
+//uso dos ...nomeDaVariavel
+
+//SPREAD: array => valores separados por virgula
+
+const myNumbers = [2, 3, 10, 5];
+
+const result3 = Math.max(...myNumbers);
+
+console.log(result3);
+
+const item = {
+  description: "Lucas",
+  price: 2500,
+  quantity: 2,
+};
+
+const cloneItem = { ...item };
+
+console.log(cloneItem);
+
+const cloneItemPlus = { ...item, weight: 10 };
+
+console.log(cloneItemPlus);
