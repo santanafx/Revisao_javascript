@@ -94,3 +94,46 @@ const s2 = nomes.sort(compararPorTamanho);
 
 console.log(s1);
 console.log(s2);
+
+//-------------------------------------------------------
+
+//desestruturacao
+
+const obj3 = {
+  id: 53,
+  date: "2022-01-20",
+  items: [
+    {
+      description: "celular",
+      price: 1499,
+      quantity: 1,
+    },
+    {
+      description: "mouse",
+      price: 2500,
+      quantity: 2,
+    },
+  ],
+  client: {
+    name: "Maria Red",
+    email: "maria@gmail.com",
+    active: true,
+  },
+};
+
+const { id, client } = obj3; //cria um objeto e pega a referencia do obj3
+
+console.log(id);
+console.log(client);
+
+// function subTotal(item) {
+//   return item.price * item.quantity;
+// }
+
+//ou
+
+function subTotal({ price, quantity }) {
+  return price * quantity;
+}
+
+console.log(subTotal(obj3.items[1]));
