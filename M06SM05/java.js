@@ -38,4 +38,20 @@ fetchResult
     console.log("erro no fetch", error);
   });
 
+//o codigo acima tem o then e catch da requisicao do fetch e somente o then para a requisicao de transformar o corpo em formato json
+
 console.log(fetchResult);
+
+//-----------------------------------------------
+
+//async/await = outra maneira de fazer a mesma coisa com then e catch
+
+async function getJsonResponse(url) {
+  const response = await fetch(url);
+  const jsonBody = await response.json();
+  return jsonBody;
+}
+
+getJsonResponse(`https://viacep.com.br/ws/${cep}/json/`).then((result) => {
+  console.log(result);
+});
