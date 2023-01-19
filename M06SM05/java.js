@@ -12,3 +12,8 @@ console.log("A");
 console.log("B");
 
 //----------------------------------------------
+
+//.them é usado caso uma promise é aceitada
+//.catch é usado quando uma promise é rejeitada
+
+//----------------------------------------------
